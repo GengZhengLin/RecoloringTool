@@ -1,0 +1,12 @@
+#ifndef SATURATION_H
+#define SATURATION_H
+#include <opencv2/opencv.hpp>
+
+class Saturation
+{
+public:
+    Saturation();
+    void ProcessImage(cv::Mat img, double scale);
+};
+
+#endif // SATURATION_H

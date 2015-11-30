@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="CenterImageView" name="image_view">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>140</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_image"/>
+    <addaction name="actionSave_image"/>
+   </widget>
+   <widget class="QMenu" name="menuHW1">
+    <property name="title">
+     <string>HW1</string>
+    </property>
+    <addaction name="actionMedianFilter"/>
+    <addaction name="actionGaussianFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuHW2">
+    <property name="title">
+     <string>HW2</string>
+    </property>
+    <addaction name="actionSaturation"/>
+    <addaction name="actionSharpen"/>
+    <addaction name="actionLiquidify"/>
+   </widget>
+   <widget class="QMenu" name="menuHW3">
+    <property name="title">
+     <string>HW3</string>
+    </property>
+    <addaction name="actionBuffing"/>
+    <addaction name="actionWhitening"/>
+   </widget>
+   <widget class="QMenu" name="menuHW4">
+    <property name="title">
+     <string>HW4</string>
+    </property>
+    <addaction name="actionRecolor"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuHW1"/>
+   <addaction name="menuHW2"/>
+   <addaction name="menuHW3"/>
+   <addaction name="menuHW4"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad_image">
+   <property name="text">
+    <string>Load image</string>
+   </property>
+  </action>
+  <action name="actionSave_image">
+   <property name="text">
+    <string>Save image</string>
+   </property>
+  </action>
+  <action name="actionMedianFilter">
+   <property name="text">
+    <string>MedianFilter</string>
+   </property>
+  </action>
+  <action name="actionGaussianFilter">
+   <property name="text">
+    <string>GaussianFilter</string>
+   </property>
+  </action>
+  <action name="actionSaturation">
+   <property name="text">
+    <string>Saturation</string>
+   </property>
+  </action>
+  <action name="actionSharpen">
+   <property name="text">
+    <string>Sharpen</string>
+   </property>
+  </action>
+  <action name="actionLiquidify">
+   <property name="text">
+    <string>liquify</string>
+   </property>
+  </action>
+  <action name="actionBuffing">
+   <property name="text">
+    <string>SkinBuffing</string>
+   </property>
+  </action>
+  <action name="actionWhitening">
+   <property name="text">
+    <string>SkinWhitening</string>
+   </property>
+  </action>
+  <action name="actionRecolor">
+   <property name="text">
+    <string>Recolor</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CenterImageView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">centerimageview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
